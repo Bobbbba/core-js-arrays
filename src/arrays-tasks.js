@@ -21,11 +21,9 @@
  *    getIntervalArray(3, 3) => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  return Array(end - start + 1)
-    .fill()
-    .map((_, idx) => start + idx);
+  const array = Array(end - start + 1).fill();
+  return Array.from(array, (_, idx) => start + idx);
 }
-
 /**
  * Returns a new array where each element is the sum of the corresponding elements
  * from two arrays. Arrays can have different lengths.
